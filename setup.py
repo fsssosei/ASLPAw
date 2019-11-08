@@ -42,7 +42,7 @@ setup(
     packages=find_packages('src'),
     include_package_data=True,
     install_requires=['networkx>=2.4',
-        'shuffle-graph>=1.0.4',
+        'shuffle-graph>=1.0.5',
         'multivalued-dict>=1.6.1',
         'count-dict>=1.0.1']
 )
