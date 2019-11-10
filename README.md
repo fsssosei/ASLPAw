@@ -14,7 +14,8 @@
 
 *Adaptive overlapping community discovery algorithm package in python.*
 
-*Welcome to complete the documentation.*
+ASLPAw can be used for disjoint and overlapping community detection and works on weighted/unweighted and directed/undirected networks.
+ASLPAw is adaptive with virtually no configuration parameters.
 
 ## Installation
 
