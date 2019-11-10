@@ -31,6 +31,8 @@ The statement to import the package:
 Example:
 
 	>>> from networkx.generators.community import relaxed_caveman_graph
+	
+	>>> #Set seed to make the results repeatable.
 	>>> data_graph = relaxed_caveman_graph(3, 6, 0.22, seed = 65535)
 	>>> ASLPAw(data_graph, seed=65535).adj
 	AdjacencyView({0: {1: {'weight': 30}}, 1: {6: {'weight': 15}, 1: {'weight': 14}}, 6: {6: {'weight': 31}}, 2: {1: {'weight': 30}}, 3: {1: {'weight': 29}}, 4: {1: {'weight': 30}}, 5: {1: {'weight': 30}}, 7: {6: {'weight': 30}}, 8: {6: {'weight': 29}}, 9: {6: {'weight': 29}}, 10: {6: {'weight': 25}}, 11: {6: {'weight': 28}}, 12: {15: {'weight': 19}}, 15: {15: {'weight': 24}}, 13: {15: {'weight': 22}}, 14: {15: {'weight': 22}}, 16: {15: {'weight': 19}}, 17: {15: {'weight': 19}}})
