@@ -13,12 +13,12 @@ def __remove_low_frequency_label(community_label_queues_for_nodes: multivalued_d
     for graph_of_node, label_list_of_nodes in community_label_queues_for_nodes.items():
         dict_of_node_labels_and_frequencies.add_node(graph_of_node)
         label_set = set(label_list_of_nodes)
-        dict_of_frequency_of_label = dict(sorted([(label_list_of_nodes.count(label_item), label_item) for label_item in label_set], key=lambda frequency_and_label: frequency_and_label[0], reverse = True))
+        dict_of_frequency_of_label = dict(sorted([(label_list_of_nodes.count(label_item), label_item) for label_item in label_set], key = lambda frequency_and_label: frequency_and_label[0], reverse = True))
         dict_of_sn_and_frequency = dict([(sequence_number, frequency_of_label) for sequence_number, frequency_of_label in enumerate(dict_of_frequency_of_label.keys(), 1)])
         list_of_mapping_points = []
         for sequence_number, frequency_of_label in dict_of_sn_and_frequency.items():
             list_of_mapping_points.extend([[sequence_number]] * frequency_of_label)
-        clf = IsolationForest(n_estimators=120, contamination='auto', behaviour='new')
+        clf = IsolationForest(n_estimators = 120, contamination = 'auto', behaviour = 'new')
         clf.fit(list_of_mapping_points)
         for sequence_number, frequency_of_label in dict_of_sn_and_frequency.items():
             if clf.predict([[sequence_number]])[0] == 1:
