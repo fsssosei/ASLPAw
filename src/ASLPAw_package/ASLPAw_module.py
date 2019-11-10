@@ -45,7 +45,7 @@ def ASLPAw(data_graph: 'graph', Repeat_T: int = 30, seed: int = None) -> DiGraph
         
         Returns
         -------
-        communities : graph
+        communities : DiGraph
             Each node uses a community discovery map with a weighted edge pointing to its own community tag node.
         
         Examples
