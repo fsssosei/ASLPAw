@@ -26,7 +26,7 @@ def __remove_low_frequency_label(community_label_queues_for_nodes: multivalued_d
                 dict_of_node_labels_and_frequencies.add_edge(graph_of_node, label_item, weight = frequency_of_label)
     return dict_of_node_labels_and_frequencies
 
-def ASLPAw(data_graph: 'graph', Repeat_T: int = 60, seed: int = None) -> DiGraph:
+def ASLPAw(data_graph: 'graph', Repeat_T: int = 30, seed: int = None) -> DiGraph:
     '''
         Returns a graph of the edges of each node with its own community tag node.
         
