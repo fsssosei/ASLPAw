@@ -18,4 +18,4 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from ASLPAw_package.ASLPAw_module import *
 
-version = '1.0.0'
+version = '1.0.1'
