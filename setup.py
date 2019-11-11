@@ -44,5 +44,6 @@ setup(
     install_requires=['networkx>=2.4',
         'multivalued-dict>=1.6.1',
         'shuffle-graph>=1.0.5',
-        'count-dict>=1.0.1']
+        'count-dict>=1.0.1',
+        'scikit-learn>=1.2.1']
 )
