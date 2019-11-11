@@ -46,6 +46,6 @@ setup(
         'multivalued-dict>=1.6.1',
         'shuffle-graph>=1.0.5',
         'count-dict>=1.0.1',
-        'scikit-learn>=1.2.1'
+        'scikit-learn>=0.21.3'
     ]
 )
