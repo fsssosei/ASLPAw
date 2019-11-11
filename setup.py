@@ -23,7 +23,7 @@ with open("README.md", encoding='utf-8') as fh:
 
 setup(
     name='ASLPAw',
-    version='1.0.0',
+    version='1.0.1',
     description='Adaptive overlapping community discovery algorithm package in python.',
     long_description=long_description,
     long_description_content_type='text/markdown',
