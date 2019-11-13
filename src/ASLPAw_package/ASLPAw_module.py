@@ -9,9 +9,9 @@ __all__: list = ['ASLPAw']
 def __remove_low_frequency_label(community_label_queues_for_nodes: multivalued_dict) -> DiGraph:
     from sklearn.ensemble import IsolationForest
     
-    dict_of_node_labels_and_frequencies = DiGraph()
+    digraph_of_node_labels_and_frequencies = DiGraph()
     for graph_of_node, label_list_of_nodes in community_label_queues_for_nodes.items():
-        dict_of_node_labels_and_frequencies.add_node(graph_of_node)
+        digraph_of_node_labels_and_frequencies.add_node(graph_of_node)
         label_set = set(label_list_of_nodes)
         dict_of_frequency_of_label = dict(sorted([(label_list_of_nodes.count(label_item), label_item) for label_item in label_set], key = lambda frequency_and_label: frequency_and_label[0], reverse = True))
         dict_of_sn_and_frequency = dict([(sequence_number, frequency_of_label) for sequence_number, frequency_of_label in enumerate(dict_of_frequency_of_label.keys(), 1)])
@@ -23,8 +23,8 @@ def __remove_low_frequency_label(community_label_queues_for_nodes: multivalued_d
         for sequence_number, frequency_of_label in dict_of_sn_and_frequency.items():
             if clf.predict([[sequence_number]])[0] == 1:
                 label_item = dict_of_frequency_of_label.__getitem__(frequency_of_label)
-                dict_of_node_labels_and_frequencies.add_edge(graph_of_node, label_item, weight = frequency_of_label)
-    return dict_of_node_labels_and_frequencies
+                digraph_of_node_labels_and_frequencies.add_edge(graph_of_node, label_item, weight = frequency_of_label)
+    return digraph_of_node_labels_and_frequencies
 
 def ASLPAw(data_graph: 'graph', Repeat_T: int = 30, seed: int = None) -> DiGraph:
     '''
@@ -86,5 +86,5 @@ def ASLPAw(data_graph: 'graph', Repeat_T: int = 30, seed: int = None) -> DiGraph
             community_label_for_node = max(weight_of_community_label_for_adjvex, key = weight_of_community_label_for_adjvex.__getitem__, default = data_graph_node)
             community_label_queues_for_nodes.update({data_graph_node: community_label_for_node})
 
-    dict_of_node_labels_and_frequencies = __remove_low_frequency_label(community_label_queues_for_nodes)
-    return dict_of_node_labels_and_frequencies
+    digraph_of_node_labels_and_frequencies = __remove_low_frequency_label(community_label_queues_for_nodes)
+    return digraph_of_node_labels_and_frequencies
