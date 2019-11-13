@@ -17,6 +17,9 @@
 ASLPAw can be used for disjoint and overlapping community detection and works on weighted/unweighted and directed/undirected networks.
 ASLPAw is adaptive with virtually no configuration parameters.
 
+This is an easy-to-understand reference implementation that is not optimized for efficiency, but is robust.The underlying NetworkX package is inherently inefficient and unsuitable for use on large networks.
+The next release will extend support for multiple productivity packages, such as SNAP, graph-tool, and igraph.
+
 ## Installation
 
 Installation can be done through pip. You must have python version >= 3.6.
