@@ -63,7 +63,7 @@ def ASLPAw(data_graph: 'graph', Repeat_T: int = 30, seed: int = None, graph_pack
         Parameters
         ----------
         data_graph : graph
-            A graph object.
+            A graph object. According to the package selected by the parameter graph_package, "data_graph" can accept graph objects of the corresponding type. However, any package you choose can accept a "NetworkX" object.
         
         Repeat_T : integer
             ASLPAw is an iterative process, this parameter sets the number of iterations.
