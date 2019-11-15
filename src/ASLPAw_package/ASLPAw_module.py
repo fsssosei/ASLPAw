@@ -1,6 +1,6 @@
 import random
-from multivalued_dict_package import *
-from shuffle_graph_package import *
+from multivalued_dict_package import *  #lgtm [py/polluting-import]
+from shuffle_graph_package import *  #lgtm [py/polluting-import]
 from count_dict_package import count_dict
 from networkx.classes.graph import Graph
 from networkx.classes.digraph import DiGraph
