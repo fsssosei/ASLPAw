@@ -7,7 +7,7 @@ from networkx.classes.digraph import DiGraph
 from networkx.classes.multigraph import MultiGraph
 from networkx.classes.multidigraph import MultiDiGraph
 
-__all__: list = ['ASLPAw']
+__all__ = ['ASLPAw']
 
 def __ASLPAw_networkx(data_graph: 'graph', Repeat_T: int, seed: int) -> 'DirectedGraph':
     def __remove_low_frequency_label(community_label_queues_for_nodes: multivalued_dict) -> DiGraph:
@@ -41,9 +41,7 @@ def __ASLPAw_networkx(data_graph: 'graph', Repeat_T: int, seed: int) -> 'Directe
             weight_of_community_label_for_adjvex = count_dict()
             for adjvex in dict_of_adjvex.keys():
                 if data_graph.is_multigraph():
-                    weight_of_edge = 0
-                    for value_of_edge in dict_of_adjvex.__getitem__(adjvex).values():
-                        weight_of_edge += value_of_edge.get('weight', 1)
+                    weight_of_edge = sum(value_of_edge.get('weight', 1) for value_of_edge in dict_of_adjvex.__getitem__(adjvex).values())
                 else:
                     weight_of_edge = dict_of_adjvex.__getitem__(adjvex).get('weight', 1)
                 community_label_for_adjvex = random.choice(community_label_queues_for_nodes.__getitem__(adjvex))
