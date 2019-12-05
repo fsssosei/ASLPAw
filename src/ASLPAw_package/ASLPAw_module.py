@@ -9,7 +9,7 @@ from networkx.classes.multidigraph import MultiDiGraph  #lgtm [py/unused-import]
 
 __all__ = ['ASLPAw']
 
-def __ASLPAw_networkx(data_graph: 'graph', Repeat_T: int, seed: int) -> 'DirectedGraph':
+def __ASLPAw_networkx(data_graph: 'graph', Repeat_T: int, seed: int) -> DiGraph:
     def __remove_low_frequency_label(community_label_queues_for_nodes: multivalued_dict) -> DiGraph:
         from sklearn.ensemble import IsolationForest
         digraph_of_node_labels_and_frequencies = DiGraph()
