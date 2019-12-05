@@ -52,7 +52,7 @@ def __ASLPAw_networkx(data_graph: 'graph', Repeat_T: int, seed: int) -> DiGraph:
     digraph_of_node_labels_and_frequencies = __remove_low_frequency_label(community_label_queues_for_nodes)
     return digraph_of_node_labels_and_frequencies
     
-def ASLPAw(data_graph: 'graph', Repeat_T: int = 30, seed: int = None, graph_package = 'NetworkX') -> 'DirectedGraph':
+def ASLPAw(data_graph: 'graph', Repeat_T: int = 30, seed: int = None, graph_package = 'NetworkX') -> DiGraph:
     '''
         Returns a graph of the edges of each node with its own community tag node.
         
