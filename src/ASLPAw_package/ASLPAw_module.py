@@ -2,10 +2,10 @@ import random
 from multivalued_dict_package import *  #lgtm [py/polluting-import]
 from shuffle_graph_package import *  #lgtm [py/polluting-import]
 from count_dict_package import count_dict
-from networkx.classes.graph import Graph
+from networkx.classes.graph import Graph  #lgtm [py/unused-import]
 from networkx.classes.digraph import DiGraph
-from networkx.classes.multigraph import MultiGraph
-from networkx.classes.multidigraph import MultiDiGraph
+from networkx.classes.multigraph import MultiGraph  #lgtm [py/unused-import]
+from networkx.classes.multidigraph import MultiDiGraph  #lgtm [py/unused-import]
 
 __all__ = ['ASLPAw']
 
