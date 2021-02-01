@@ -22,7 +22,7 @@ The next release will extend support for multiple productivity packages, such as
 
 ## Installation
 
-Installation can be done through pip. You must have python version >= 3.7
+Installation can be done through pip. You must have python version >= 3.8
 
 	pip install ASLPAw
 
@@ -39,8 +39,8 @@ Example:
 	>>> #Set seed to make the results repeatable.
 	>>> data_graph = relaxed_caveman_graph(3, 6, 0.22, seed = 65535)
 	>>> ASLPAw(data_graph, seed=65535).adj
-	AdjacencyView({0: {1: {'weight': 30}}, 1: {6: {'weight': 15}, 1: {'weight': 14}}, 6: {6: {'weight': 31}}, 2: {1: {'weight': 30}}, 3: {1: {'weight': 29}}, 4: {1: {'weight': 30}}, 5: {1: {'weight': 30}}, 7: {6: {'weight': 30}}, 8: {6: {'weight': 29}}, 9: {6: {'weight': 29}}, 10: {6: {'weight': 25}}, 11: {6: {'weight': 28}}, 12: {15: {'weight': 19}}, 15: {15: {'weight': 24}}, 13: {15: {'weight': 22}}, 14: {15: {'weight': 22}}, 16: {15: {'weight': 19}}, 17: {15: {'weight': 19}}})
+	AdjacencyView({0: {2: {'weight': 0.9}}, 2: {2: {'weight': 0.9333333333333333}}, 1: {6: {'weight': 0.6}}, 6: {6: {'weight': 1.0}}, 3: {2: {'weight': 0.6}}, 4: {2: {'weight': 0.8666666666666667}}, 5: {2: {'weight': 0.9333333333333333}}, 7: {6: {'weight': 1.0}}, 8: {6: {'weight': 0.9666666666666667}}, 9: {6: {'weight': 0.9333333333333333}}, 10: {6: {'weight': 0.8666666666666667}}, 11: {6: {'weight': 0.9666666666666667}}, 12: {12: {'weight': 1.0333333333333334}}, 13: {12: {'weight': 0.9666666666666667}}, 14: {12: {'weight': 1.0}}, 15: {12: {'weight': 1.0}}, 16: {12: {'weight': 1.0}}, 17: {12: {'weight': 1.0}}})
 	
 	>>> data_graph = relaxed_caveman_graph(3, 6, 0.39, seed = 65535)
 	>>> ASLPAw(data_graph, seed=65535).adj
-	AdjacencyView({0: {3: {'weight': 25}}, 3: {3: {'weight': 27}}, 1: {3: {'weight': 26}}, 2: {3: {'weight': 28}}, 4: {3: {'weight': 29}}, 5: {3: {'weight': 29}}, 6: {6: {'weight': 30}}, 7: {6: {'weight': 30}}, 8: {6: {'weight': 21}}, 9: {6: {'weight': 27}}, 10: {3: {'weight': 20}}, 11: {6: {'weight': 27}}, 12: {15: {'weight': 16}, 6: {'weight': 13}}, 15: {}, 13: {6: {'weight': 19}}, 14: {6: {'weight': 20}}, 16: {15: {'weight': 17}, 6: {'weight': 12}}, 17: {15: {'weight': 18}, 6: {'weight': 12}}})
+	AdjacencyView({0: {1: {'weight': 0.9333333333333333}}, 1: {1: {'weight': 1.0}}, 2: {1: {'weight': 1.0}}, 3: {1: {'weight': 0.9666666666666667}}, 4: {1: {'weight': 1.0}}, 5: {1: {'weight': 0.9666666666666667}}, 6: {}, 7: {7: {'weight': 0.7666666666666667}}, 8: {}, 9: {13: {'weight': 0.4}, 6: {'weight': 0.26666666666666666}}, 13: {13: {'weight': 0.6333333333333333}}, 10: {1: {'weight': 0.5666666666666667}}, 11: {7: {'weight': 0.6333333333333333}}, 12: {12: {'weight': 0.4666666666666667}, 13: {'weight': 0.4}}, 14: {13: {'weight': 0.5666666666666667}}, 15: {13: {'weight': 0.5333333333333333}, 12: {'weight': 0.3333333333333333}}, 16: {13: {'weight': 0.43333333333333335}}, 17: {13: {'weight': 0.43333333333333335}, 12: {'weight': 0.4}}})
