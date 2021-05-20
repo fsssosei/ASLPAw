@@ -46,6 +46,7 @@ setup(
         'multivalued-dict>=2.0.1',
         'shuffle-graph>=2.1.0',
         'count-dict>=1.1.1',
-        'scikit-learn>=0.24.1'
+        'scikit-learn>=0.24.1',
+        'similarity-index-of-label-graph>=2.0.1'
     ]
 )
