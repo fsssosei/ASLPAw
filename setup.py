@@ -23,7 +23,7 @@ with open("README.md", encoding='utf-8') as fh:
 
 setup(
     name='ASLPAw',
-    version='2.1.0',
+    version='2.1.1',
     description='Adaptive overlapping community discovery algorithm package in python.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -46,6 +46,7 @@ setup(
         'multivalued-dict>=2.0.1',
         'shuffle-graph>=2.1.0',
         'count-dict>=1.1.1',
+        'similarity-index-of-label-graph>=2.0.1',
         'scikit-learn>=0.24.1'
     ]
 )
